@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+// arquivo Users.js
+import React from 'react';
 
-class Users extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Users</h2>
-        <p> My awesome Users component </p>
-      </div>
-    );
-  }
-};
+const Users = ({ greetingMessage = 'Hi There', match }) => (
+  <div>
+    <h2> Users </h2>
+    <p> {greetingMessage}, this is my awesome Users component </p>
+    <p> Param: { match.params.id } </p>
+  </div>
+);
 
 export default Users;
